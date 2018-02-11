@@ -1,0 +1,79 @@
+@import 'vendor/_reset';
+
+// Colors
+$primary: slategray;
+$accent: tomato;
+$white: whitesmoke;
+$text: #444;
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: $text;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding-top: 3.125rem;
+    background: $primary;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+
+    h2 {
+        margin: 0 0 1rem;
+        color: $white;
+        font-size: 2rem;
+    }
+
+    > p {
+        color: $white;
+        font-size: 0.875rem;
+    }
+
+    .words {
+        position: relative;
+        width: 100%;
+        margin: 1.25rem auto;
+        background: $white;
+        border-radius: 5px;
+        box-shadow: 0.625rem 0.625rem 0 rgba(0, 0, 0, 0.1);
+        padding: 0.8125rem 2rem 1rem 4rem;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(3%, #fff)) 0 0.1875rem;
+        background-size: 100% 2rem;
+        line-height: 2rem;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0.25rem;
+            top: 0;
+            left: 3.125rem;
+            bottom: 0;
+            border: 0.0625rem solid;
+            border-color: transparent lighten($accent, 30%);
+        }
+
+        p {
+            margin: 0 0 2rem 0;
+        }
+    }
+}
